@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CV & Portfolio | Academic Details</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif; background: #f4f7fc; color: #1a2a3f; line-height: 1.5; padding: 1rem; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #005f8c; outline-offset: 4px; background-color: #e6f4ff; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05); overflow: hidden; padding: 1.5rem; }
+    .nav-links { display: flex; flex-direction: column; gap: 0.75rem; list-style: none; margin-bottom: 2rem; background: #eef2f5; padding: 1rem; border-radius: 2rem; }
+    .nav-links li a { display: block; text-align: center; text-decoration: none; font-weight: 600; background: white; padding: 0.75rem; border-radius: 3rem; color: #1e4a6e; transition: all 0.2s ease; border: 1px solid #cbdbe2; }
+    .nav-links li a:hover { background: #1e4a6e; color: white; border-color: #1e4a6e; }
+    .nav-links li a.active { background: #1e4a6e; color: white; border-color: #1e4a6e; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0c4e6e; border-left: 6px solid #2c7da0; padding-left: 1rem; }
+    h2 { font-size: 1.6rem; margin: 1.5rem 0 0.75rem; color: #1f5e7e; border-bottom: 3px solid #89c2d0; padding-bottom: 0.25rem; display: inline-block; }
+    h3 { font-size: 1.25rem; margin: 1rem 0 0.5rem; color: #2c7da0; }
+    .profile-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; background: #fefcf5; padding: 1.5rem; border-radius: 1.5rem; margin: 1rem 0; }
+    @media (min-width: 768px) { .profile-grid { grid-template-columns: 1fr 2fr; } body { padding: 2rem; } .nav-links { flex-direction: row; justify-content: center; gap: 1.5rem; } .nav-links li a { padding: 0.6rem 1.6rem; } }
+    .profile-photo img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 6px 14px rgba(0,0,0,0.1); background: #e2e8f0; }
+    .info-card, .cv-card, .portfolio-detail { background: white; padding: 1rem; border-radius: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.03); margin-bottom: 1rem; }
+    .cv-card { background: #f8fafc; border-left: 5px solid #2c7da0; }
+    .quote-block { font-style: italic; background: #eef2f3; padding: 1rem; border-radius: 1rem; margin: 1.2rem 0; border-left: 8px solid #61a5c2; }
+    footer { margin-top: 2rem; text-align: center; font-size: 0.85rem; padding-top: 1rem; border-top: 1px solid #cbdbe2; color: #4a627a; }
+    .hobbies-flex { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+    .hobby-item { background: #e9f1f5; padding: 0.75rem 1.2rem; border-radius: 40px; font-weight: 500; text-align: center; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #0c4e6e; color: white; padding: 8px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="container">
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Home / Profile</a></li>
+      <li><a href="profiles.html" class="active">📄 CV & Achievements</a></li>
+      <li><a href="contact.html">✉️ Contact & Goals</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <h1>📋 Personal Portfolio & Detailed CV</h1>
+    <!-- Grid layout to display profile and portfolio side by side on larger -->
+    <div class="profile-grid">
+      <div class="profile-photo">
+        <img src="profilepic.jpg" alt="Portrait of student Ahmed" onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Photo+ID:20250001';">
+        <p><strong>ID: 20250001</strong></p>
+      </div>
+      <div class="info-card">
+        <h2>Soha Samy Hlway</h2>
+        <p><strong>Student ID:</strong> 20250001 | <strong>Major:</strong> Computer Science</p>
+        <p><strong>Expected Graduation:</strong> 2028 | <strong>GPA:</strong> 4.2/5.0 </p>
+        <p>📌 <em>Web developer in progress, passionate about accessible design & full-stack innovation.</em></p>
+      </div>
+    </div>
+
+    <h2>📖 Detailed CV / Academic Experience</h2>
+    <div class="cv-card">
+      <h3>🎓 Education</h3>
+      <p>• Bachelor of Science in Computer Science, CSE Department — 2025–2028 <br>
+      • Relevant Coursework: Web Application Development (CS381), Data Structures, Database, HCI, Algorithms.</p>
+      <h3>💻 Projects & Achievements</h3>
+      <p>• <strong>Personal Academic Portfolio</strong>  — fully responsive semantic HTML/CSS, no frameworks, demonstrates Flexbox & Grid.<br>
+      • <strong>University Library Catalog UI</strong> — wireframe and prototype with accessibility first design.<br>
+      • <strong>Chess Tournament Manager (Python)</strong> — console application using object-oriented programming.<br>
+      • Certificate: Responsive Web Design (freeCodeCamp) - ongoing.</p>
+      <h3>🏅 Leadership & Involvement</h3>
+      <p>• Member of CS Club, event coordinator for coding workshops.<br>
+      • Volunteer tutor for introductory programming (C++ and web basics).</p>
+    </div>
+
+    <!-- Three hobbies  -->
+    <h2>🎯 Interests / Hobbies </h2>
+    <div class="hobbies-flex">
+      <div class="hobby-item">📚 Reading tech blogs & sci-fi</div>
+      <div class="hobby-item">🎧 UI/UX design & wireframing</div>
+      <div class="hobby-item">♟️ Competitive Chess </div>
+    </div>
+
+    <!-- Personal Quote  -->
+    <div class="quote-block">
+      “Strive not to be a success, but rather to be of value.” — Albert Einstein
+    </div>
+    <footer>
+      <p>© 2026 Soha Samy Hlway — Full CV | All information authentic for academic assignment</p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

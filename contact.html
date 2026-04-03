@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact & Learning Goals | Academic Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, 'Segoe UI', 'Roboto', sans-serif; background: #f4f7fc; color: #1a2a3f; line-height: 1.5; padding: 1rem; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #005f8c; outline-offset: 4px; background-color: #e6f4ff; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05); overflow: hidden; padding: 1.5rem; }
+    .nav-links { display: flex; flex-direction: column; gap: 0.75rem; list-style: none; margin-bottom: 2rem; background: #eef2f5; padding: 1rem; border-radius: 2rem; }
+    .nav-links li a { display: block; text-align: center; text-decoration: none; font-weight: 600; background: white; padding: 0.75rem; border-radius: 3rem; color: #1e4a6e; transition: all 0.2s ease; border: 1px solid #cbdbe2; }
+    .nav-links li a:hover { background: #1e4a6e; color: white; border-color: #1e4a6e; }
+    .nav-links li a.active { background: #1e4a6e; color: white; border-color: #1e4a6e; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #0c4e6e; border-left: 6px solid #2c7da0; padding-left: 1rem; }
+    h2 { font-size: 1.6rem; margin: 1.5rem 0 0.75rem; color: #1f5e7e; border-bottom: 3px solid #89c2d0; padding-bottom: 0.25rem; display: inline-block; }
+    .contact-details, .goals-section { background: #fefcf5; padding: 1.2rem; border-radius: 1.5rem; margin: 1.2rem 0; }
+    .email-highlight { background: #e2f0f5; padding: 0.8rem; border-radius: 1rem; font-family: monospace; font-size: 1.1rem; display: inline-block; border: 1px solid #bdd3e2; }
+    .profile-mini { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .profile-mini img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid #2c7da0; }
+    .quote-block { font-style: italic; background: #eef2f3; padding: 1rem; border-radius: 1rem; margin: 1rem 0; border-left: 8px solid #61a5c2; }
+    footer { margin-top: 2rem; text-align: center; font-size: 0.85rem; padding-top: 1rem; border-top: 1px solid #cbdbe2; color: #4a627a; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #0c4e6e; color: white; padding: 8px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
+    @media (min-width: 768px) { body { padding: 2rem; } .nav-links { flex-direction: row; justify-content: center; gap: 1.5rem; } .nav-links li a { padding: 0.6rem 1.6rem; } }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="container">
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Home / Profile</a></li>
+      <li><a href="profiles.html">📄 CV & Achievements</a></li>
+      <li><a href="contact.html" class="active">✉️ Contact & Goals</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <h1>📬 Get in touch & academic vision</h1>
+    
+    <div class="profile-mini">
+      <img src="profilepic.jpg" alt="student photo thumbnail" onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=ID:20250001';">
+      <div><strong>Soha Samy Hlway</strong> | CS381 - Web Application Development</div>
+    </div>
+
+    <!-- Contact Email (YIC email format) -->
+    <h2>📧 Contact Email (YIC)</h2>
+    <div class="contact-details">
+      <p><strong>Official YIC Email:</strong> <span class="email-highlight">soha.11h@yic.edu.sa</span></p>
+      <p><strong>Student Portal ID:</strong> 20250001 </p>
+      <p>📍 Department of Computer Science & Engineering, College of Computing.</p>
+    </div>
+
+    <!-- Learning goals paragraph  -->
+    <h2>🎯 Learning goals in web development</h2>
+    <div class="goals-section">
+      <p>As a computer science student, my goals for CS381 and beyond are to develop professional-grade front-end engineering skills with deep empathy for accessibility. By the end of this course, I will have mastered semantic HTML5, responsive design using mobile-first approach, and layout techniques using CSS Flexbox and Grid without external frameworks. Additionally, I aim to integrate modern CSS features like custom properties and container queries. I also plan to extend this portfolio into a full-stack application (with Node.js/Express) by next semester, incorporating dynamic content and secure authentication. Ultimately, I strive to build inclusive web experiences that serve diverse populations, including people with disabilities.</p>
+    </div>
+
+    <!-- Reiterate a meaningful quote related to learning -->
+    <div class="quote-block">
+      “Web accessibility is not a feature — it's a fundamental aspect of a modern web.” — inspired by Tim Berners-Lee
+    </div>
+    
+    <!-- a small flex demonstration: some additional contact channels (just design) -->
+    <div style="margin: 1rem 0; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+      <span style="background:#eef2f5; padding:0.4rem 1rem; border-radius:30px;">📱 GitHub: SohaHlway</span>
+      <span style="background:#eef2f5; padding:0.4rem 1rem; border-radius:30px;">🌐 Portfolio </span>
+    </div>
+
+    <footer>
+      <p>© 2026 Soha Samy Hlway — Student ID 20250001, CS381 Assignment 1.</p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Academic Portfolio | [Your Name]</title>
+  <style>
+    /* ---------- RESET & GLOBAL (Mobile-first) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Noto Sans', sans-serif;
+      background: #f4f7fc;
+      color: #1a2a3f;
+      line-height: 1.5;
+      padding: 1rem;
+    }
+
+    /* accessible focus styles */
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid #005f8c;
+      outline-offset: 4px;
+      background-color: #e6f4ff;
+    }
+
+    /* containers */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      padding: 1.5rem;
+    }
+
+    /* ----- navigation  ----- */
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      list-style: none;
+      margin-bottom: 2rem;
+      background: #eef2f5;
+      padding: 1rem;
+      border-radius: 2rem;
+    }
+
+    .nav-links li a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      background: white;
+      padding: 0.75rem;
+      border-radius: 3rem;
+      color: #1e4a6e;
+      transition: all 0.2s ease;
+      border: 1px solid #cbdbe2;
+    }
+
+    .nav-links li a:hover {
+      background: #1e4a6e;
+      color: white;
+      border-color: #1e4a6e;
+    }
+
+    /* active page indicator */
+    .nav-links li a.active {
+      background: #1e4a6e;
+      color: white;
+      border-color: #1e4a6e;
+    }
+
+    /* headings */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #0c4e6e;
+      border-left: 6px solid #2c7da0;
+      padding-left: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.5rem 0 0.75rem 0;
+      color: #1f5e7e;
+      display: inline-block;
+      border-bottom: 3px solid #89c2d0;
+      padding-bottom: 0.25rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 1rem 0 0.5rem;
+      color: #2c7da0;
+    }
+
+    /* profile section  */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      background: #fefcf5;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .profile-photo {
+      text-align: center;
+    }
+
+    .profile-photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      background: #e2e8f0;
+    }
+
+    .info-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    /* Interests / Hobbies : flexbox */
+    .hobbies-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .hobby-item {
+      background: #e9f1f5;
+      padding: 0.75rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      flex: 1 0 auto;
+      text-align: center;
+    }
+
+    /* CV / details card */
+    .cv-card {
+      background: #f8fafc;
+      border-left: 5px solid #2c7da0;
+      padding: 1rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+
+    .quote-block {
+      font-style: italic;
+      background: #eef2f3;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin: 1.2rem 0;
+      font-size: 1.1rem;
+      border-left: 8px solid #61a5c2;
+    }
+
+    /* learning goals & contact */
+    .learning-goals {
+      background: #ffffffea;
+      border: 1px solid #cbd5e1;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    /* contact info */
+    .contact-block {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #dfeef5;
+      border-radius: 1rem;
+    }
+
+    /* footer */
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      padding-top: 1rem;
+      border-top: 1px solid #cbdbe2;
+      color: #4a627a;
+    }
+
+    /* responsiveness (tablet and desktop) */
+    @media (min-width: 768px) {
+      body {
+        padding: 2rem;
+      }
+      .container {
+        padding: 2rem;
+      }
+      .nav-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .nav-links li a {
+        padding: 0.6rem 1.6rem;
+      }
+      .profile-grid {
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+      }
+      .hobbies-flex {
+        justify-content: flex-start;
+      }
+      .hobby-item {
+        flex: 0 1 auto;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .profile-grid {
+        gap: 2.5rem;
+      }
+    }
+
+    /* accessibility: skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0c4e6e;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* button style for any fake interactive (but no JS, just style) */
+    .btn-ghost {
+      display: inline-block;
+      background: none;
+      border: 1px solid #2c7da0;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="container">
+  <nav aria-label="Main navigation">
+    <ul class="nav-links" id="main-nav">
+      <li><a href="index.html" id="nav-home">🏠 Home / Profile</a></li>
+      <li><a href="profiles.html" id="nav-cv">📄 CV & Achievements</a></li>
+      <li><a href="contact.html" id="nav-contact">✉️ Contact & Goals</a></li>
+    </ul>
+  </nav>
+
+  
+  <main id="main-content">
+    <h1>Academic Portfolio</h1>
+    
+    <!-- profile section using CSS GRID -->
+    <div class="profile-grid">
+      <div class="profile-photo">
+        <img src="profilepic.jpg" alt="Student portrait: official academic photo" 
+             onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=Photo+ID:20250001';">
+        <p class="btn-ghost" style="margin-top: 0.5rem;">📸 Student ID: 20250001</p>
+      </div>
+      <div class="info-card">
+        <h2>👤 Personal Details</h2>
+        <p><strong>Full Name:</strong> Soha samy Hlway</p>
+        <p><strong>Student ID:</strong> 20250001</p>
+        <p><strong>Major:</strong> Computer Science (CS)</p>
+        <p><strong>Department:</strong> Computer Science & Engineering</p>
+      </div>
+    </div>
+
+    <!-- three interests/hobbies using FLEXBOX -->
+    <h2>🌟 My Interests & Hobbies</h2>
+    <div class="hobbies-flex">
+      <div class="hobby-item">📖 Reading (Sci-Fi & Innovation)</div>
+      <div class="hobby-item">🎨 UI/UX sketching & wireframing</div>
+      <div class="hobby-item">♟️ Chess & strategic thinking</div>
+    </div>
+
+    <!-- Favorite quote -->
+    <div class="quote-block">
+      “The future belongs to those who believe in the beauty of their dreams.”<br>
+      — <strong>Eleanor Roosevelt</strong>
+    </div>
+
+    <!-- short learning goals paragraph -->
+    <h2>📚 Learning Goals (Web Dev)</h2>
+    <div class="learning-goals">
+      <p>My primary goal in web development is to build accessible, inclusive web applications that empower users. 
+      I aim to master semantic HTML5, advanced CSS architectures (Flexbox/Grid), and later dive into React and 
+      backend with Node.js. This semester, I want to create a complete personal academic ecosystem that reflects 
+      modern web standards and performance best practices.</p>
+    </div>
+
+    <!-- mini cv summary -->
+    <h2>📌 Brief Academic Snapshot</h2>
+    <div class="cv-card">
+      <p><strong>📅 Academic Year 1447-1448</strong> — Second Semester, CS381 Web Application Development.<br>
+      I've completed Data Structures, Database Systems, and UI Fundamentals. Passionate about bridging design and engineering.</p>
+    </div>
+    
+    <footer>
+      <p>© 2026 — Personal Academic Portfolio </p>
+    </footer>
+  </main>
+</div>
+</body>
+</html>
